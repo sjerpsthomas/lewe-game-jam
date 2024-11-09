@@ -1,14 +1,14 @@
-class_name Tower
-extends Node2D
+class_name LowJassieTower
+extends JassieTower
 
-var next_tower: Tower = null
-var cost_to_upgrade = 0
-@export var cost_label: RichTextLabel
-var mouse_entered = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	next_tower = MiddleJassieTower.new()
+	cost_to_upgrade = 1000
+	cost_label.text = str(cost_to_upgrade)
 	pass # Replace with function body.
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
