@@ -1,18 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpqbvidacb8et"]
+[gd_scene load_steps=3 format=3 uid="uid://bpqbvidacb8et"]
 
 [ext_resource type="PackedScene" uid="uid://b33hn4xyfgdob" path="res://tower/jassie_tower/jassie_tower.tscn" id="1_dmkoa"]
-[ext_resource type="Texture2D" uid="uid://bowlgm1ysmpxv" path="res://tower/jassie_tower/low_sprite.png" id="2_3u5od"]
 [ext_resource type="Script" path="res://tower/jassie_tower/low_jassie_tower.gd" id="2_8wa02"]
 
 [node name="Tower" instance=ExtResource("1_dmkoa")]
 script = ExtResource("2_8wa02")
 
-[node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_3u5od")
+[node name="TextureButton" type="TextureButton" parent="." index="0"]
+offset_right = 40.0
+offset_bottom = 40.0
 
-[node name="Cost Label" parent="." index="2"]
-offset_left = -1.0
-offset_right = 39.0
-bbcode_enabled = true
-text = "[center]1000[/center]"
-fit_content = true
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

@@ -6,12 +6,25 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oy325"]
 size = Vector2(64, 64)
 
-[node name="TowerSlot" type="Node2D" node_paths=PackedStringArray("slot_sprite")]
+[node name="TowerSlot" type="Node2D" node_paths=PackedStringArray("slot_sprite", "cost_label")]
 script = ExtResource("1_n07tp")
 available_towers = Array[String](["res://tower/jassie_tower/low_jassie_tower.tscn"])
 slot_sprite = NodePath("Sprite2D")
+cost_label = NodePath("Cost Label")
+
+[node name="Cost Label" type="RichTextLabel" parent="."]
+z_index = 5
+offset_left = -32.0
+offset_top = -12.0
+offset_right = 32.0
+offset_bottom = 32.0
+pivot_offset = Vector2(32, 32)
+mouse_filter = 2
+bbcode_enabled = true
+text = "[center][color=black]2000[/color][/center]"
 
 [node name="TextureButton" type="TextureButton" parent="."]
+z_index = 2
 offset_left = -32.0
 offset_top = -32.0
 offset_right = 32.0
