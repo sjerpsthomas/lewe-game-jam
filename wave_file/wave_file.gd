@@ -30,7 +30,7 @@ func _init(file_path: String) -> void:
 		# enable waiting
 		if enemy_path == "*":
 			subwave.enemy = null
-			subwave.count = 0
+			subwave.count = 1
 			subwave.delta = float(line_data[1])
 		else:
 			subwave.enemy = load("res://" + enemy_path) 
