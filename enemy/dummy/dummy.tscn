@@ -3,21 +3,25 @@
 [ext_resource type="PackedScene" uid="uid://dsdwwcpt4616e" path="res://enemy/enemy.tscn" id="1_cyf4c"]
 [ext_resource type="Texture2D" uid="uid://bwthc5lxhqhjm" path="res://icon.svg" id="2_tt4bo"]
 
-[sub_resource type="Curve2D" id="Curve2D_e0tmw"]
-bake_interval = 1.0
+[sub_resource type="Curve2D" id="Curve2D_3l5i7"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 3, 294, 0, 0, 0, 0, 353, 90, 0, 0, 0, 0, 563, 114, 0, 0, 0, 0, 821, 292, 0, 0, 0, 0, 1001, 132, 0, 0, 0, 0, 1055, 352)
+"points": PackedVector2Array(0, 0, 0, 0, 97, 347, 0, 0, 0, 0, 296, 180, 0, 0, 0, 0, 732, 177, 0, 0, 0, 0, 910, 358)
 }
-point_count = 6
+point_count = 4
 
-[node name="Enemy" node_paths=PackedStringArray("patrol_path") instance=ExtResource("1_cyf4c")]
+[node name="Enemy" node_paths=PackedStringArray("patrol_path", "attack_timer") instance=ExtResource("1_cyf4c")]
 patrol_path = NodePath("Path2D")
+attack_timer = NodePath("Attack Timer")
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(0.5, -0.5)
 
-[node name="Path2D" type="Path2D" parent="." index="1"]
-curve = SubResource("Curve2D_e0tmw")
-
-[node name="Sprite2D" parent="." index="2"]
+[node name="Sprite2D" parent="." index="1"]
 texture = ExtResource("2_tt4bo")
+
+[node name="Attack Timer" type="Timer" parent="." index="2"]
+
+[node name="Path2D" type="Path2D" parent="." index="3"]
+curve = SubResource("Curve2D_3l5i7")
+
+[connection signal="timeout" from="Attack Timer" to="." method="attack_timer_out"]
