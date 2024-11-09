@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b33hn4xyfgdob" path="res://tower/jassie_tower/jassie_tower.tscn" id="1_00lkj"]
 [ext_resource type="Script" path="res://high_jassie_tower.gd" id="2_w85o0"]
-[ext_resource type="Texture2D" uid="uid://c5libcmd83syj" path="res://tower/jassie_tower/high_sprite.png" id="3_0cm1l"]
+[ext_resource type="Texture2D" uid="uid://c5libcmd83syj" path="res://tower/jassie_tower/tower_sprites/high_sprite.png" id="3_0cm1l"]
 
 [node name="Tower" instance=ExtResource("1_00lkj")]
 script = ExtResource("2_w85o0")

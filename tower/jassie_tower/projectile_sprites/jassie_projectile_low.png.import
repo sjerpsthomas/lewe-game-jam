@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bowlgm1ysmpxv"
-path="res://.godot/imported/low_sprite.png-0a20ed613d4e15680b2df0ea638dfd26.ctex"
+uid="uid://cemeq67tyh2sy"
+path="res://.godot/imported/jassie_projectile_low.png-9cbad8614dffc399412d1f855d2811c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tower/jassie_tower/low_sprite.png"
-dest_files=["res://.godot/imported/low_sprite.png-0a20ed613d4e15680b2df0ea638dfd26.ctex"]
+source_file="res://tower/jassie_tower/projectile_sprites/jassie_projectile_low.png"
+dest_files=["res://.godot/imported/jassie_projectile_low.png-9cbad8614dffc399412d1f855d2811c9.ctex"]
 
 [params]
 
