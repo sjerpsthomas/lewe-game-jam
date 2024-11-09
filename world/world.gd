@@ -6,6 +6,8 @@ extends Node2D
 @onready var enemies: Node2D = $Enemies
 @onready var timer_label := $UI/TimerLabel as Label
 
+@onready var enemy_path := $EnemyPath as Path2D
+
 var wave_file: WaveFile
 @export_file("*.txt") var wave_file_path: String
 
@@ -57,7 +59,9 @@ func _process_active(delta: float) -> void:
 		subwave_timer = 0
 		
 		if subwave.enemy:
-			print(subwave.enemy.resource_path)
+			var enemy: Enemy = subwave.enemy.instantiate()
+			enemy.patrol_path = enemy_path
+			add_child(enemy)
 		else:
 			print("wait")
 		

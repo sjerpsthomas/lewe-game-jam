@@ -33,7 +33,7 @@ func _init(file_path: String) -> void:
 			subwave.count = 1
 			subwave.delta = float(line_data[1])
 		else:
-			subwave.enemy = load("res://" + enemy_path) 
+			subwave.enemy = load("res://" + enemy_path + ".tscn")
 			subwave.count = int(line_data[1])
 			subwave.delta = float(line_data[2])
 		
