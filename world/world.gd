@@ -16,7 +16,7 @@ enum State {
 
 var state := State.IDLE
 
-var wave_timer: float
+var subwave_timer: float
 
 
 # -
@@ -43,16 +43,29 @@ func _goto_active() -> void:
 	timer_label.visible = true
 	
 	wave_file = WaveFile.new(wave_file_path)
-	wave_timer = wave_file.get_total_time()
-	print(wave_timer)
 
 # -
 func _process_active(delta: float) -> void:
-	wave_timer -= delta
+	timer_label.text = "%.2f" % (wave_file.get_total_time() - subwave_timer)
 	
-	timer_label.text = "%.2f" % wave_timer
+	var subwave = wave_file.subwaves[0]
 	
-	if wave_timer <= 0:
+	# repeat waiting
+	subwave_timer += delta
+	if subwave_timer >= subwave.delta:
+		subwave.count -= 1
+		subwave_timer = 0
+		
+		if subwave.enemy:
+			print(subwave.enemy.resource_path)
+		else:
+			print("wait")
+		
+		# remove subwave
+		if subwave.count == 0:
+			wave_file.subwaves.pop_front()
+	
+	if wave_file.subwaves.is_empty():
 		_goto_idle()
 
 
