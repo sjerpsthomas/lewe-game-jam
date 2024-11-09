@@ -70,7 +70,7 @@ scale = Vector2(1.4, 1.4)
 texture = ExtResource("4_wcsx0")
 
 [node name="MeukButton" parent="." instance=ExtResource("3_sedhk")]
-position = Vector2(363, 369)
+position = Vector2(363, 345)
 metadata/_edit_group_ = true
 
 [node name="Button" parent="MeukButton" index="0"]
@@ -83,6 +83,23 @@ offset_right = 230.0
 offset_right = 230.0
 text = "Spelen!"
 
+[node name="MeukButton2" parent="." instance=ExtResource("3_sedhk")]
+position = Vector2(387, 436)
+scale = Vector2(0.8, 0.8)
+metadata/_edit_group_ = true
+
+[node name="Button" parent="MeukButton2" index="0"]
+offset_right = 230.0
+
+[node name="NinePatchRect" parent="MeukButton2" index="1"]
+offset_right = 230.0
+
+[node name="Label" parent="MeukButton2" index="2"]
+offset_right = 230.0
+text = "Credits"
+
 [connection signal="pressed" from="MeukButton" to="." method="_on_meuk_button_pressed"]
+[connection signal="pressed" from="MeukButton2" to="." method="_on_meuk_button_2_pressed"]
 
 [editable path="MeukButton"]
+[editable path="MeukButton2"]
