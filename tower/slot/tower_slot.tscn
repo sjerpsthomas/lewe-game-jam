@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cadqvv5vdildc" path="res://tower/slot/tower_slot_sprite.png" id="2_a740j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oy325"]
-size = Vector2(512, 512)
+size = Vector2(64, 64)
 
 [node name="TowerSlot" type="Node2D" node_paths=PackedStringArray("slot_sprite")]
 script = ExtResource("1_n07tp")

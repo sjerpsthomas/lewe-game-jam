@@ -5,7 +5,6 @@
 [node name="World" instance=ExtResource("1_h5uf8")]
 
 [node name="StartWave" parent="UI" index="0"]
-layout_mode = 0
 offset_left = 0.0
 offset_top = 0.0
 offset_right = 90.0
