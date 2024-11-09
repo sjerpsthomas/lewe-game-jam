@@ -1,6 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://8gjw2451fcw1"]
+[gd_scene load_steps=4 format=3 uid="uid://8gjw2451fcw1"]
 
 [ext_resource type="Script" path="res://tower/slot/tower_slot.gd" id="1_n07tp"]
+[ext_resource type="Texture2D" uid="uid://cadqvv5vdildc" path="res://tower/slot/tower_slot_sprite.png" id="2_a740j"]
 
-[node name="TowerSlot" type="Node2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oy325"]
+size = Vector2(512, 512)
+
+[node name="TowerSlot" type="Node2D" node_paths=PackedStringArray("slot_sprite")]
 script = ExtResource("1_n07tp")
+slot_sprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_a740j")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_oy325")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

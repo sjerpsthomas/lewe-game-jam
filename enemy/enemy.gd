@@ -30,7 +30,6 @@ func move_enemy(delta: float):
 		
 
 func attack():
-	print("AAAAAAAAAAAAAAAAA")
 	attack_signal.emit()
 
 func attack_timer_out() -> void:
