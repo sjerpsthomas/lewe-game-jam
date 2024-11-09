@@ -16,6 +16,8 @@ func _ready():
 		queue_free()
 	patrol_length = patrol_path.curve.get_baked_length()
 	move_speed /= 10
+	
+	position = patrol_path.curve.sample_baked(0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

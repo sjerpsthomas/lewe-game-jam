@@ -1,8 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://cbnf5f04nbgic"]
+[gd_scene load_steps=4 format=3 uid="uid://cbnf5f04nbgic"]
 
 [ext_resource type="PackedScene" uid="uid://0tktsb37lre8" path="res://world/world.tscn" id="1_h5uf8"]
+[ext_resource type="Texture2D" uid="uid://4dfnvs5msrjj" path="res://sprite_maps/grass.png" id="2_qptfp"]
+
+[sub_resource type="Curve2D" id="Curve2D_h6i84"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 176, -38, -76, -38, 76, 38, 206, 231, -82, -57, 82, 57, 739, 196, 78, -99, -78, 99, 842, 432, 0, 0, 0, 0, -57, 482)
+}
+point_count = 5
 
 [node name="World" instance=ExtResource("1_h5uf8")]
+
+[node name="Grass" type="Sprite2D" parent="." index="0"]
+position = Vector2(479, 263)
+scale = Vector2(3.84137, 3.84137)
+texture = ExtResource("2_qptfp")
+
+[node name="EnemyPath" parent="." index="3"]
+curve = SubResource("Curve2D_h6i84")
 
 [node name="StartWave" parent="UI" index="0"]
 offset_left = 0.0
