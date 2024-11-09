@@ -15,9 +15,9 @@ cost_label = NodePath("Cost Label")
 [node name="Cost Label" type="RichTextLabel" parent="."]
 z_index = 5
 offset_left = -32.0
-offset_top = -12.0
+offset_top = -60.0
 offset_right = 32.0
-offset_bottom = 32.0
+offset_bottom = -16.0
 pivot_offset = Vector2(32, 32)
 mouse_filter = 2
 bbcode_enabled = true
