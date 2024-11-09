@@ -26,8 +26,25 @@ func _init(file_path: String) -> void:
 		var subwave = Subwave.new()
 		
 		var enemy_path = line_data[0]
-		subwave.enemy = null if enemy_path == "" else load("res://" + enemy_path) 
-		subwave.count = int(line_data[1])
-		subwave.delta = float(line_data[2])
+		
+		# enable waiting
+		if enemy_path == "*":
+			subwave.enemy = null
+			subwave.count = 0
+			subwave.delta = float(line_data[1])
+		else:
+			subwave.enemy = load("res://" + enemy_path) 
+			subwave.count = int(line_data[1])
+			subwave.delta = float(line_data[2])
 		
 		subwaves.append(subwave)
+
+
+# get the total time of the subwave
+func get_total_time() -> float:
+	var res := 0.0
+	
+	for subwave in subwaves:
+		res += subwave.delta * subwave.count
+	
+	return res

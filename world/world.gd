@@ -18,10 +18,6 @@ var state := State.IDLE
 
 var wave_timer: float
 
-# -
-func _ready() -> void:
-	wave_file = WaveFile.new(wave_file_path)
-	pass
 
 # -
 func _process(delta: float) -> void:
@@ -46,13 +42,12 @@ func _goto_active() -> void:
 	state = State.ACTIVE
 	timer_label.visible = true
 	
-	# todo: read from wave file
-	wave_timer = 5.0
+	wave_file = WaveFile.new(wave_file_path)
+	wave_timer = wave_file.get_total_time()
+	print(wave_timer)
 
 # -
 func _process_active(delta: float) -> void:
-	print("Process active")
-	
 	wave_timer -= delta
 	
 	timer_label.text = "%.2f" % wave_timer

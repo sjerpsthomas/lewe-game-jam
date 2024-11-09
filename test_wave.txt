@@ -1,1 +1,4 @@
 world/world.tscn 2 0.1
+* 3
+* 2
+world/world.tscn 3 1
