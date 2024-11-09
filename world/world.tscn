@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://0tktsb37lre8"]
+
+[node name="World" type="Node2D"]
+
+[node name="TowerSlots" type="Node2D" parent="."]
+
+[node name="Enemy" type="Node2D" parent="."]
