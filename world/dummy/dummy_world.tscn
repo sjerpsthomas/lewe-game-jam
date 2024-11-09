@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbnf5f04nbgic"]
+[gd_scene load_steps=8 format=3 uid="uid://cbnf5f04nbgic"]
 
 [ext_resource type="PackedScene" uid="uid://0tktsb37lre8" path="res://world/world.tscn" id="1_h5uf8"]
 [ext_resource type="Texture2D" uid="uid://4dfnvs5msrjj" path="res://sprite_maps/grass.png" id="2_qptfp"]
+[ext_resource type="PackedScene" uid="uid://8gjw2451fcw1" path="res://tower/slot/tower_slot.tscn" id="3_uijt1"]
+[ext_resource type="Texture2D" uid="uid://bwv1kf8qxjmyo" path="res://sprite_maps/windmill_1.png" id="4_b7hxo"]
+[ext_resource type="Texture2D" uid="uid://7t2dgnrxexfe" path="res://sprite_maps/windmill_2.png" id="5_35tog"]
 
 [sub_resource type="Curve2D" id="Curve2D_h6i84"]
 _data = {
@@ -9,12 +12,41 @@ _data = {
 }
 point_count = 5
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_mvtts"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_b7hxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_35tog")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
 [node name="World" instance=ExtResource("1_h5uf8")]
 
 [node name="Grass" type="Sprite2D" parent="." index="0"]
 position = Vector2(479, 263)
 scale = Vector2(3.84137, 3.84137)
 texture = ExtResource("2_qptfp")
+
+[node name="TowerSlot" parent="TowerSlots" index="0" instance=ExtResource("3_uijt1")]
+position = Vector2(98, 134)
+
+[node name="TowerSlot2" parent="TowerSlots" index="1" instance=ExtResource("3_uijt1")]
+position = Vector2(196, 319)
+
+[node name="TowerSlot3" parent="TowerSlots" index="2" instance=ExtResource("3_uijt1")]
+position = Vector2(414, 142)
+
+[node name="TowerSlot4" parent="TowerSlots" index="3" instance=ExtResource("3_uijt1")]
+position = Vector2(750, 358)
+
+[node name="TowerSlot5" parent="TowerSlots" index="4" instance=ExtResource("3_uijt1")]
+position = Vector2(366, 408)
 
 [node name="EnemyPath" parent="." index="3"]
 curve = SubResource("Curve2D_h6i84")
@@ -24,3 +56,14 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 90.0
 offset_bottom = 31.0
+
+[node name="TowerSlot" parent="." index="5" instance=ExtResource("3_uijt1")]
+position = Vector2(762, 143)
+
+[node name="Meuk" type="Node2D" parent="." index="6"]
+
+[node name="Windmill" type="AnimatedSprite2D" parent="Meuk" index="0"]
+position = Vector2(538, 90)
+sprite_frames = SubResource("SpriteFrames_mvtts")
+autoplay = "default"
+frame_progress = 0.68529

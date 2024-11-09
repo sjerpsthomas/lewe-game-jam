@@ -7,7 +7,6 @@
 size = Vector2(64, 64)
 
 [node name="TowerSlot" type="Node2D" node_paths=PackedStringArray("slot_sprite")]
-position = Vector2(237, 157)
 script = ExtResource("1_n07tp")
 available_towers = Array[String](["res://tower/jassie_tower/low_jassie_tower.tscn"])
 slot_sprite = NodePath("Sprite2D")
