@@ -3,8 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dsdwwcpt4616e" path="res://enemy/enemy.tscn" id="1_cyf4c"]
 [ext_resource type="Texture2D" uid="uid://bwthc5lxhqhjm" path="res://icon.svg" id="2_tt4bo"]
 
-[node name="Enemy" node_paths=PackedStringArray("patrol_path", "attack_timer") instance=ExtResource("1_cyf4c")]
-patrol_path = NodePath("")
+[node name="Enemy" node_paths=PackedStringArray("attack_timer") instance=ExtResource("1_cyf4c")]
 attack_timer = NodePath("Attack Timer")
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
