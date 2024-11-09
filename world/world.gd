@@ -4,7 +4,6 @@ extends Node2D
 
 @onready var tower_slots: Node2D = $TowerSlots
 @onready var enemies: Node2D = $Enemies
-@onready var timer_label := $UI/TimerLabel as Label
 
 @onready var enemy_path := $EnemyPath as Path2D
 
@@ -18,6 +17,7 @@ enum State {
 
 var state := State.IDLE
 
+var max_subwave_timer: float
 var subwave_timer: float
 
 
@@ -31,7 +31,8 @@ func _goto_idle() -> void:
 	print("Go to idle")
 	
 	state = State.IDLE
-	timer_label.visible = false
+	
+	$UI/StartWave/ColorRect.visible = false
 
 # -
 func _process_idle(delta: float) -> void:
@@ -42,13 +43,17 @@ func _goto_active() -> void:
 	print("Go to active")
 	
 	state = State.ACTIVE
-	timer_label.visible = true
 	
 	wave_file = WaveFile.new(wave_file_path)
+	max_subwave_timer = wave_file.get_total_time()
+	
+	$UI/StartWave/ColorRect.visible = true
 
 # -
 func _process_active(delta: float) -> void:
-	timer_label.text = "%.2f" % (wave_file.get_total_time() - subwave_timer)
+	var wave_time := wave_file.get_total_time() - subwave_timer
+	
+	$UI/StartWave/ColorRect.size.x = 290.0 * (1 - (wave_time / max_subwave_timer))
 	
 	var subwave = wave_file.subwaves[0]
 	
