@@ -6,6 +6,9 @@ extends Node2D
 @onready var enemies: Node2D = $Enemies
 @onready var timer_label := $UI/TimerLabel as Label
 
+var wave_file: WaveFile
+@export_file("*.txt") var wave_file_path: String
+
 enum State {
 	IDLE,
 	ACTIVE
@@ -15,6 +18,10 @@ var state := State.IDLE
 
 var wave_timer: float
 
+# -
+func _ready() -> void:
+	wave_file = WaveFile.new(wave_file_path)
+	pass
 
 # -
 func _process(delta: float) -> void:
