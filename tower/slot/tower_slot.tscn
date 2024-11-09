@@ -21,7 +21,7 @@ offset_bottom = 32.0
 pivot_offset = Vector2(32, 32)
 mouse_filter = 2
 bbcode_enabled = true
-text = "[center][color=black]2000[/color][/center]"
+text = "[center]2000[/center]"
 
 [node name="TextureButton" type="TextureButton" parent="."]
 z_index = 2
