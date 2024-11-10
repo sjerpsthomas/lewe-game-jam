@@ -14,3 +14,7 @@ func _process(delta: float) -> void:
 # navigates to dummy world
 func _on_meuk_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://world/dummy/dummy_world.tscn")
+
+
+func _on_meuk_button_2_pressed() -> void:
+	get_tree().change_scene_to_file("res://main_menu/credits.tscn")
