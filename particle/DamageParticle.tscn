@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmy2q2nurgsx2"]
+
+[ext_resource type="Script" path="res://particle/damage_particle.gd" id="1_pcl4r"]
+[ext_resource type="Texture2D" uid="uid://mq4ey6q6cmqr" path="res://particle/particle_1.png" id="2_0frrq"]
+[ext_resource type="Texture2D" uid="uid://b585obwhtkekd" path="res://particle/particle_2.png" id="3_32lru"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rpjhf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0frrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_32lru")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="DamageParticle" type="Node2D"]
+script = ExtResource("1_pcl4r")
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+autoplay = true
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_rpjhf")
+autoplay = "default"
+frame_progress = 0.787879
+
+[connection signal="finished" from="Sound" to="." method="_on_sound_finished"]
