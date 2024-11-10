@@ -5,6 +5,7 @@ extends Node2D
 @export var move_speed = 100
 @export var attack_damage = 5
 @export var attack_timer: Timer
+@export var health := 10.0
 var patrol_offset = 0
 var patrol_length = 0
 var is_done_moving = false
@@ -37,3 +38,14 @@ func attack():
 
 func attack_timer_out() -> void:
 	attack()
+
+
+# takes damage
+func take_damage(damage: float) -> void:
+	health -= damage
+	
+	var particle = preload("res://particle/DamageParticle.tscn").instantiate()
+	get_tree().current_scene.get_node("Particles").add_child(particle)
+	
+	if health <= 0:
+		queue_free()

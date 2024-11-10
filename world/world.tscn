@@ -11,6 +11,8 @@ wave_file_path = "res://test_wave.txt"
 
 [node name="Enemies" type="Node2D" parent="."]
 
+[node name="Particles" type="Node2D" parent="."]
+
 [node name="EnemyPath" type="Path2D" parent="."]
 
 [node name="UI" type="Control" parent="."]
