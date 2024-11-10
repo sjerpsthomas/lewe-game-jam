@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bowlgm1ysmpxv"
-path="res://.godot/imported/low_sprite.png-3fe083f3ec8d7945a8e446bfeae8a972.ctex"
+path="res://.godot/imported/low_sprite.png-0a20ed613d4e15680b2df0ea638dfd26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tower/jassie_tower/tower_sprites/low_sprite.png"
-dest_files=["res://.godot/imported/low_sprite.png-3fe083f3ec8d7945a8e446bfeae8a972.ctex"]
+source_file="res://tower/jassie_tower/low_sprite.png"
+dest_files=["res://.godot/imported/low_sprite.png-0a20ed613d4e15680b2df0ea638dfd26.ctex"]
 
 [params]
 

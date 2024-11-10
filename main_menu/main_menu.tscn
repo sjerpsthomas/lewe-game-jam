@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://main_menu/main_menu.gd" id="1_a4gf4"]
 [ext_resource type="Texture2D" uid="uid://baxenndutkwfl" path="res://sprite_maps/main_menu_bg_1.png" id="2_nmcx2"]
 [ext_resource type="Texture2D" uid="uid://4dfnvs5msrjj" path="res://sprite_maps/grass.png" id="2_piqe5"]
-[ext_resource type="PackedScene" uid="uid://crjiimdlhptc1" path="res://ui/MeukButton.tscn" id="3_sedhk"]
+[ext_resource type="PackedScene" path="res://ui/MeukButton.tscn" id="3_sedhk"]
 [ext_resource type="Texture2D" uid="uid://bcrwq7tw7nri6" path="res://sprite_maps/main_menu_bg_2.png" id="3_sk33l"]
 [ext_resource type="Texture2D" uid="uid://cw55h5osxbn0h" path="res://ui/title.png" id="4_wcsx0"]
 [ext_resource type="Texture2D" uid="uid://lxw35o6fkh76" path="res://sprite_maps/main_menu_bg_add.png" id="5_7te00"]
