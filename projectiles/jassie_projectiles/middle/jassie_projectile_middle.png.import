@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bewu4dewm7a3p"
-path="res://.godot/imported/jassie_projectile_middle.png-d5ba51e0a943c6930fa6bb629940b51c.ctex"
+path="res://.godot/imported/jassie_projectile_middle.png-a131429a1aa77698801bd5ecc9563a37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://projectiles/jassie_projectiles/jassie_projectile_middle.png"
-dest_files=["res://.godot/imported/jassie_projectile_middle.png-d5ba51e0a943c6930fa6bb629940b51c.ctex"]
+source_file="res://projectiles/jassie_projectiles/middle/jassie_projectile_middle.png"
+dest_files=["res://.godot/imported/jassie_projectile_middle.png-a131429a1aa77698801bd5ecc9563a37.ctex"]
 
 [params]
 

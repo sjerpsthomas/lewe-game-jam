@@ -1,9 +1,10 @@
-class_name JassieProjectile
-extends Projectile
+class_name HighJassieTower
+extends JassieTower
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	destroyedOnDamage = true
+	cost_to_upgrade = -1
 	pass # Replace with function body.
 
 

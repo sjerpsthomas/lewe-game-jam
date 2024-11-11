@@ -1,7 +1,8 @@
 class_name Projectile
 extends Node2D
 
-var damage = 0
+var damage: int
+var destroyedOnDamage: bool
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,4 +17,5 @@ func _process(delta: float) -> void:
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):
 		body.take_damage(damage)
-		queue_free()
+		if destroyedOnDamage:
+			queue_free()

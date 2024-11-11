@@ -1,0 +1,17 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmy65tohmmrd"]
+
+[ext_resource type="PackedScene" uid="uid://tqc8m1qptg1n" path="res://projectiles/jassie_projectiles/jassie_projectile.tscn" id="1_dyo6n"]
+[ext_resource type="Script" path="res://projectiles/jassie_projectiles/high/jassie_projectile_high.gd" id="2_ta1m8"]
+[ext_resource type="Texture2D" uid="uid://44hu45ywtufe" path="res://projectiles/jassie_projectiles/high/jassie_projectile_high.png" id="3_uh17a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kxih"]
+size = Vector2(10, 24)
+
+[node name="Projectile" instance=ExtResource("1_dyo6n")]
+script = ExtResource("2_ta1m8")
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource("RectangleShape2D_2kxih")
+
+[node name="Sprite2D" parent="." index="1"]
+texture = ExtResource("3_uh17a")

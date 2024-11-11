@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://44hu45ywtufe"
-path="res://.godot/imported/jassie_projectile_high.png-d8365a07d606485651330c63a6be9873.ctex"
+uid="uid://cemeq67tyh2sy"
+path="res://.godot/imported/jassie_projectile_low.png-c6be61476e676bc90231823e7ebb46d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://projectiles/jassie_projectiles/jassie_projectile_high.png"
-dest_files=["res://.godot/imported/jassie_projectile_high.png-d8365a07d606485651330c63a6be9873.ctex"]
+source_file="res://projectiles/jassie_projectiles/low/jassie_projectile_low.png"
+dest_files=["res://.godot/imported/jassie_projectile_low.png-c6be61476e676bc90231823e7ebb46d5.ctex"]
 
 [params]
 

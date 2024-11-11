@@ -20,6 +20,8 @@ var state := State.IDLE
 var max_subwave_timer: float
 var subwave_timer: float
 
+func _ready() -> void:
+	_set_tower_slot_paths()
 
 # -
 func _process(delta: float) -> void:
@@ -82,3 +84,11 @@ func _process_active(delta: float) -> void:
 func _on_start_wave_pressed() -> void:
 	if state != State.IDLE: return
 	_goto_active()
+
+func _set_tower_slot_paths() -> void:
+	var tower_slots: Array[Node]
+	if has_node("TowerSlots"):
+		tower_slots = get_node("TowerSlots").get_children()
+	if tower_slots and enemy_path:
+		for slot in tower_slots:
+			slot.path = enemy_path

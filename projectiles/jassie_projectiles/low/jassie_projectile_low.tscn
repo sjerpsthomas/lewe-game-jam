@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bwe3mwn2183rc"]
 
 [ext_resource type="PackedScene" uid="uid://tqc8m1qptg1n" path="res://projectiles/jassie_projectiles/jassie_projectile.tscn" id="1_afubn"]
-[ext_resource type="Texture2D" uid="uid://cemeq67tyh2sy" path="res://projectiles/jassie_projectiles/jassie_projectile_low.png" id="2_1ty85"]
+[ext_resource type="Texture2D" uid="uid://cemeq67tyh2sy" path="res://projectiles/jassie_projectiles/low/jassie_projectile_low.png" id="2_1ty85"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oej2c"]
 size = Vector2(12, 24)
@@ -13,5 +13,5 @@ position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_oej2c")
 
 [node name="Sprite2D" parent="." index="1"]
-texture_filter = 1
+position = Vector2(-1, 0)
 texture = ExtResource("2_1ty85")
