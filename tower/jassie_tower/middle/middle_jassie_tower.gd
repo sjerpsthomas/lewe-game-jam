@@ -8,8 +8,7 @@ func _ready() -> void:
 	projectile_to_spawn = "res://projectiles/jassie_projectiles/middle/jassie_projectile_middle.tscn"
 	cost_to_upgrade = 5000
 	spawn_radius = 20
-	pass # Replace with function body.
-	
+	max_projectiles = 4	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
