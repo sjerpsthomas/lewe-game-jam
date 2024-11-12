@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bowlgm1ysmpxv"
-path="res://.godot/imported/low_sprite.png-0a20ed613d4e15680b2df0ea638dfd26.ctex"
+uid="uid://c5libcmd83syj"
+path="res://.godot/imported/high_sprite.png-140930d940759b20b81632cfacf507a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://tower/jassie_tower/low_sprite.png"
-dest_files=["res://.godot/imported/low_sprite.png-0a20ed613d4e15680b2df0ea638dfd26.ctex"]
+source_file="res://tower/jassie_tower/high/high_sprite.png"
+dest_files=["res://.godot/imported/high_sprite.png-140930d940759b20b81632cfacf507a5.ctex"]
 
 [params]
 

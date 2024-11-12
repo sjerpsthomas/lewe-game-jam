@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://d1j2ephsdtb72"]
 
 [ext_resource type="PackedScene" uid="uid://b33hn4xyfgdob" path="res://tower/jassie_tower/jassie_tower.tscn" id="1_wb5tc"]
-[ext_resource type="Script" path="res://tower/jassie_tower/middle_jassie_tower.gd" id="2_7xfw7"]
-[ext_resource type="Texture2D" uid="uid://rgn123hansme" path="res://tower/jassie_tower/middle_sprite.png" id="3_doqd5"]
+[ext_resource type="Script" path="res://tower/jassie_tower/middle/middle_jassie_tower.gd" id="2_7xfw7"]
+[ext_resource type="Texture2D" uid="uid://rgn123hansme" path="res://tower/jassie_tower/middle/middle_sprite.png" id="3_doqd5"]
 
 [node name="Tower2" instance=ExtResource("1_wb5tc")]
 script = ExtResource("2_7xfw7")

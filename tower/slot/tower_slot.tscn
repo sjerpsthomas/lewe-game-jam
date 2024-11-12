@@ -8,7 +8,7 @@ size = Vector2(64, 64)
 
 [node name="TowerSlot" type="Node2D" node_paths=PackedStringArray("slot_sprite", "cost_label")]
 script = ExtResource("1_n07tp")
-available_towers = Array[String](["res://tower/jassie_tower/low_jassie_tower.tscn"])
+available_towers = Array[String](["res://tower/jassie_tower/low/low_jassie_tower.tscn"])
 slot_sprite = NodePath("Sprite2D")
 cost_label = NodePath("Cost Label")
 
@@ -21,7 +21,7 @@ offset_bottom = -16.0
 pivot_offset = Vector2(32, 32)
 mouse_filter = 2
 bbcode_enabled = true
-text = "[center][color=black]2000[/color][/center]"
+text = "[center][color=black]1000[/color][/center]"
 
 [node name="TextureButton" type="TextureButton" parent="."]
 z_index = 2

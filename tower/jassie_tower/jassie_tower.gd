@@ -20,6 +20,7 @@ func createProjectile():
 	spawn_position = parent_slot.getClosestPathPositionFromTower()
 	spawn_position.x += rng.randf_range(-spawn_radius, spawn_radius)
 	spawn_position.y += rng.randf_range(-spawn_radius, spawn_radius)
+	rng.randomize()
 	spawn_position = self.to_global(spawn_position)
 	spawn_position = parent_slot.getClosestPathPosition(spawn_position)
 	spawnProjectile(spawn_position, projectile)
