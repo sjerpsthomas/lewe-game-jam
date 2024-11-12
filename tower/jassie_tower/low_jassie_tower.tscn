@@ -10,7 +10,4 @@ script = ExtResource("2_8wa02")
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Projectile Timer" parent="." index="3"]
-wait_time = 5.0
-
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

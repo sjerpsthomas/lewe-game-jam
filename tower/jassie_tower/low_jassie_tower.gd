@@ -14,17 +14,9 @@ func _process(delta: float) -> void:
 func createProjectile():
 	var projectile_scene = load(projectile_to_spawn)
 	var projectile = projectile_scene.instantiate()
-	var tower_slot = get_parent()
 	var spawn_position
-	spawn_position = tower_slot.getClosestPathPositionFromTower()
+	spawn_position = parent_slot.getClosestPathPositionFromTower()
 	spawn_position.x += rng.randf_range(-20, 20)
 	spawn_position.y += rng.randf_range(-20, 20)
-	spawn_position = tower_slot.getClosestPathPosition(spawn_position)
-	print("Spawned projectile: ", projectile)
+	spawn_position = parent_slot.getClosestPathPosition(spawn_position)
 	spawnProjectile(spawn_position, projectile)
-
-
-func _on_projectile_timer_timeout() -> void:
-	print("projectile spawn")
-	createProjectile()
-	pass # Replace with function body.

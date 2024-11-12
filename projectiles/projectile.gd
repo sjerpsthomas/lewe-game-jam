@@ -13,9 +13,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.has_method("take_damage"):
-		body.take_damage(damage)
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print(area.get_parent())
+	if area.get_parent().has_method("take_damage"):
+		area.get_parent().take_damage(damage)
 		if destroyedOnDamage:
 			queue_free()

@@ -18,6 +18,7 @@ func set_tower(new_tower: String) -> void:
 	# Adds new tower to scene
 	var current_child_scene = load(new_tower)
 	current_child_tower = current_child_scene.instantiate()
+	current_child_tower.parent_slot = self
 	add_child(current_child_tower)
 	# Only displays upgrade cost if it is upgradeable
 	if current_child_tower.isUpgradeable():

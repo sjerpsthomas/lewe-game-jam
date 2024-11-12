@@ -6,6 +6,7 @@ var cost_to_upgrade: int = 0
 @export var cost_label: RichTextLabel
 var mouse_entered: bool = false
 var projectile_to_spawn: String
+var parent_slot: TowerSlot
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -27,3 +28,7 @@ func spawnProjectile(spawn_position: Vector2, projectile: Projectile) -> void:
 	print(projectile.global_position)
 	add_child(projectile)
 	print(get_children())
+
+
+func _on_projectile_timer_timeout() -> void:
+	createProjectile()
