@@ -1,16 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://b33hn4xyfgdob"]
+[gd_scene load_steps=3 format=3 uid="uid://b33hn4xyfgdob"]
 
 [ext_resource type="PackedScene" uid="uid://cpuat8aei18mc" path="res://tower/tower.tscn" id="1_2ofl1"]
 [ext_resource type="Script" path="res://tower/jassie_tower/jassie_tower.gd" id="2_eosal"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l6msj"]
-radius = 16.0
-height = 76.0
-
 [node name="Tower" instance=ExtResource("1_2ofl1")]
 script = ExtResource("2_eosal")
-
-[node name="CollisionShape2D" parent="Area2D" index="0"]
-position = Vector2(0, -50)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_l6msj")

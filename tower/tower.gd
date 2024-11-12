@@ -24,11 +24,9 @@ func createProjectile() -> void:
 	pass
 
 func spawnProjectile(spawn_position: Vector2, projectile: Projectile) -> void:
-	projectile.global_position = spawn_position
-	print(projectile.global_position)
+	projectile.position = spawn_position
+	print(projectile.position)
 	add_child(projectile)
-	print(get_children())
-
 
 func _on_projectile_timer_timeout() -> void:
 	createProjectile()

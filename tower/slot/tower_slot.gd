@@ -45,7 +45,13 @@ func _on_texture_button_pressed() -> void:
 		set_tower(current_child_tower.next_tower)
 
 func getClosestPathPositionFromTower():
-	return path.curve.get_closest_point(global_position)
+	var position_on_curve = path.to_local(global_position)
+	var closest_point = path.curve.get_closest_point(position_on_curve)
+	var closest_point_global = path.to_global(closest_point)
+	return self.to_local(closest_point_global)
 
-func getClosestPathPosition(position: Vector2):
-	return path.curve.get_closest_point(position)
+func getClosestPathPosition(global_position: Vector2):
+	var position_on_curve = path.to_local(global_position)
+	var closest_point = path.curve.get_closest_point(position_on_curve)
+	var closest_point_global = path.to_global(closest_point)
+	return self.to_local(closest_point_global)

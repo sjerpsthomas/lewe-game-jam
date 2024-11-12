@@ -6,17 +6,8 @@ func _ready() -> void:
 	next_tower = "res://tower/jassie_tower/middle_jassie_tower.tscn"
 	projectile_to_spawn = "res://projectiles/jassie_projectiles/low/jassie_projectile_low.tscn"
 	cost_to_upgrade = 1000
+	spawn_radius = 15
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-func createProjectile():
-	var projectile_scene = load(projectile_to_spawn)
-	var projectile = projectile_scene.instantiate()
-	var spawn_position
-	spawn_position = parent_slot.getClosestPathPositionFromTower()
-	spawn_position.x += rng.randf_range(-20, 20)
-	spawn_position.y += rng.randf_range(-20, 20)
-	spawn_position = parent_slot.getClosestPathPosition(spawn_position)
-	spawnProjectile(spawn_position, projectile)
